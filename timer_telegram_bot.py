@@ -46,9 +46,9 @@ def reply(chat_id, message, bot):
 
 def main():
     load_dotenv()
-    TG_TOKEN = os.getenv("TG_TOKEN")
+    tg_token = os.getenv("TG_TOKEN")
 
-    bot = ptbot.Bot(TG_TOKEN)
+    bot = ptbot.Bot(tg_token)
     bot.reply_on_message(reply, bot=bot)
     bot.run_bot()
 
